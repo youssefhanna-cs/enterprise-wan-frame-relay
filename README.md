@@ -270,8 +270,8 @@ enterprise-wan-frame-relay/
 
 > Developed as part of **Data Communication coursework** — simulating a real-world multi-branch WAN using Cisco Packet Tracer.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](#)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=flat&logo=github)](#)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/youssef-hanna-29759433a/)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=flat&logo=github)](https://github.com/youssefhanna-cs)
 
 ---
 
