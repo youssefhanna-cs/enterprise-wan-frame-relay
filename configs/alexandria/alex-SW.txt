@@ -1,0 +1,16 @@
+en
+conf t
+
+int fa0/1
+switchport mode trunk
+ex
+
+int fa0/3
+switchport mode access
+switchport access vlan 10
+ex
+
+int fa0/2
+switchport mode access
+switchport access vlan 20
+ex

@@ -1,0 +1,22 @@
+en
+conf t
+
+! === Edge Router - Alexandria ===
+! Connects Alexandria internal network to WAN (Frame Relay Cloud)
+
+int s0/1/0
+encapsulation frame-relay
+ip add 10.10.10.2 255.255.255.0
+frame-relay map ip 10.10.10.1 201 broadcast
+no sh
+ex
+
+int g0/0
+ip add 20.0.0.1 255.255.255.0
+no sh
+ex
+
+router eigrp 5
+net 10.10.10.0 0.0.0.255
+net 20.0.0.0 0.0.0.255
+ex

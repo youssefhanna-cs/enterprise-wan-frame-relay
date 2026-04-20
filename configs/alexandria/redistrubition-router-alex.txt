@@ -1,0 +1,25 @@
+en
+conf t
+
+! === Redistribution Router - Alexandria ===
+! Connects EIGRP AS5 (WAN side) with EIGRP AS8 (LAN side)
+
+int g0/0
+ip add 20.0.0.2 255.255.255.0
+no sh
+ex
+
+int g0/1
+ip add 30.0.0.1 255.255.255.0
+no sh
+ex
+
+router eigrp 5
+net 20.0.0.0 0.0.0.255
+redistribute eigrp 8 metric 10000 100 255 1 1500
+ex
+
+router eigrp 8
+net 30.0.0.0 0.0.0.255
+redistribute eigrp 5 metric 10000 100 255 1 1500
+ex

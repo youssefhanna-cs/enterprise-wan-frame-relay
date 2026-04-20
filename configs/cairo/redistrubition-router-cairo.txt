@@ -1,0 +1,28 @@
+en
+conf t
+
+int g0/0
+ip add 50.0.0.2 255.255.255.0
+no sh
+ex
+
+int g0/1
+ip add 60.0.0.1 255.255.255.0
+no sh 
+ex
+
+router rip
+net 60.0.0.0
+ex
+
+router ospf 22
+net 50.0.0.0 255.255.255.0 area 0
+ex
+
+router ospf 22
+redistribute rip subnets
+ex
+router rip 
+redistribute ospf 22 metric 1
+ex
+

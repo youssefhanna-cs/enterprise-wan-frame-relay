@@ -1,0 +1,20 @@
+en
+conf t
+
+int g0/0
+ip add 60.0.0.1 255.255.255.0
+no sh 
+ex
+
+int g0/1
+ip add 70.0.0.3 255.255.255.0
+no sh 
+ex
+
+router rip
+net 60.0.0.0
+net 70.0.0.0
+ex
+
+access-list 100 deny ip host 70.0.0.1 host 40.0.0.1
+access-list 100 permit ip any any

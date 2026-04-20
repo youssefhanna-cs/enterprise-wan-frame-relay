@@ -1,0 +1,29 @@
+en
+conf t
+
+int g0/0
+ip add 30.0.0.2 255.255.255.0
+no sh 
+ex
+
+int g0/1.10
+encapsulation dot1Q 10
+ip add 192.168.5.2 255.255.255.0
+no sh 
+ex
+
+int g0/1.20
+encapsulation dot1Q 20
+ip add 192.168.6.2 255.255.255.0
+no sh 
+ex
+
+int g0/1
+no sh 
+ex
+
+router eigrp 8
+net 30.0.0.0 0.0.0.255
+net 192.168.5.0 0.0.0.255
+net 192.168.6.0 0.0.0.255
+ex

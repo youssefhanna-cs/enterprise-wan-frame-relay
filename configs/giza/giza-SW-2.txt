@@ -1,0 +1,12 @@
+en
+conf t
+
+int range fa0/2-3
+switchport mode access
+spanning-tree portfast
+spanning-tree bpduguard enable 
+switchport port-security 
+switchport port-security mac-address sticky 
+ex
+
+spanning-tree mode rapid-pvst 

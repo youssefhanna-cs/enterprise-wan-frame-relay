@@ -1,0 +1,8 @@
+en
+conf t
+
+int g0/0
+ip add 40.0.0.3 255.255.255.0
+no sh 
+ex
+

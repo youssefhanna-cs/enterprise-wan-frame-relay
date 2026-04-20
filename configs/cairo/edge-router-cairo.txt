@@ -1,0 +1,12 @@
+en
+conf t
+
+int g0/0
+ip add 50.0.0.1 255.255.255.0
+no sh 
+ex
+
+router ospf 22
+net 50.0.0.0 255.255.255.0 area 0
+ex
+
