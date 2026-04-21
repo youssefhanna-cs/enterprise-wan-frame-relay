@@ -8,7 +8,7 @@ ex
 
 int s0/1/0
 encapsulation frame-relay
-ip add 10.10.10.4 255.0.0.0
+ip add 10.10.10.4 255.255.255.0
 frame-relay map ip 10.10.10.1 40 broadcast
 frame-relay map ip 10.10.10.2 50 broadcast
 frame-relay map ip 10.10.10.3 60 broadcast
@@ -17,5 +17,5 @@ ex
 
 router ospf 22
 net 40.0.0.0 0.0.0.255 area 0
-net 10.0.0.0 0.255.255.255 area 0
+net 10.10.10.0 0.255.255.255 area 0
 ex
