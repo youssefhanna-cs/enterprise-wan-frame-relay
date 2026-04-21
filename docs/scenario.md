@@ -27,7 +27,7 @@ As the network engineer, the solution was to:
    - Cairo: RIP (internal LAN) + OSPF (toward WAN edge)
    - Damietta: OSPF
    - Alexandria: EIGRP AS8 (LAN) + EIGRP AS5 (toward WAN edge)
-   - Giza: EIGRP AS9 (LAN) + OSPF (toward WAN edge)
+   - Giza: EIGRP AS9 (LAN) + OSPF (LAN)
 3. **Implement Route Redistribution** at boundary routers to ensure full reachability across all protocol domains
 4. **Segment the Alexandria branch** using VLANs (VLAN 10 & VLAN 20) with Router-on-a-Stick for inter-VLAN routing
 5. **Apply an ACL** on the Cairo edge router to block specific unauthorized traffic between branches
