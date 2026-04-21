@@ -266,6 +266,15 @@ enterprise-wan-frame-relay/
 
 ---
 
+## 📅 Project Timeline
+
+| Milestone | Date |
+|-----------|------|
+| Project Implemented | December 14, 2025 |
+| Uploaded to GitHub | April 2026 |
+
+---
+
 ## 👨‍💻 Author
 
 > Developed as part of **Data Communication coursework** — simulating a real-world multi-branch WAN using Cisco Packet Tracer.
