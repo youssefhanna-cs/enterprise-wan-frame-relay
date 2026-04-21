@@ -38,7 +38,7 @@ Due to legacy infrastructure, each branch uses a different routing protocol. The
 ### WAN Design
 - Technology: Frame Relay (ISP simulation)  
 - WAN Network: 10.10.10.0/8  
-- Hub-and-spoke style connectivity  
+- Full Mesh connectivity — direct PVC between every pair of branches
 
 ---
 
