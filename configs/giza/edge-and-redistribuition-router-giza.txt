@@ -25,3 +25,12 @@ ex
 router eigrp 9
 redistribute ospf 22 metric 1 0 1 1 1 
 ex
+
+int s0/1/0
+encapsulation frame-relay
+ip add 10.10.10.3 255.255.255.0
+frame-relay map ip 10.10.10.1 700 broadcast
+frame-relay map ip 10.10.10.2 800 broadcast
+frame-relay map ip 10.10.10.4 900 broadcast
+no sh
+ex
