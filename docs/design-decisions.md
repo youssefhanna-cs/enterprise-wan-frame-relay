@@ -1,13 +1,14 @@
 # 🧠 Design Decisions
 
-## 1. Frame Relay — Why Hub-and-Spoke?
+## 1. Frame Relay — Why Full Mesh?
 
-Frame Relay was chosen to simulate a real ISP WAN service. The **Hub-and-Spoke** topology was selected because:
-- Cairo (HQ) acts as the central communication point
-- Reduces the number of PVCs needed (N-1 instead of N*(N-1)/2 for full mesh)
-- Reflects real-world ISP cost structures where full mesh is expensive
+Frame Relay was chosen to simulate a real ISP WAN service. The **Full Mesh** topology was selected because:
+- Every branch has a **direct PVC** to all other branches — no traffic needs to transit through a third router
+- Provides **lower latency** for branch-to-branch communication
+- Eliminates the single point of failure that exists in Hub-and-Spoke
+- Reflects scenarios where all branches communicate frequently with each other
 
-**Tradeoff:** Spoke-to-spoke traffic must pass through the Hub, adding latency — acceptable for this scenario.
+**Tradeoff:** Requires more PVCs (N*(N-1)/2) compared to Hub-and-Spoke, which increases ISP cost in real deployments — acceptable for this simulation.
 
 ---
 
