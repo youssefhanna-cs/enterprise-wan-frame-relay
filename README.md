@@ -85,9 +85,9 @@ This project simulates a **real-world enterprise WAN** connecting four company b
 int s0/1/0
 encapsulation frame-relay
 ip add 10.10.10.1 255.255.255.0
-frame-relay map ip 10.10.10.2 102 broadcast
-frame-relay map ip 10.10.10.3 103 broadcast
-frame-relay map ip 10.10.10.4 104 broadcast
+frame-relay map ip 10.10.10.2 100 broadcast
+frame-relay map ip 10.10.10.3 200 broadcast
+frame-relay map ip 10.10.10.4 300 broadcast
 no sh
 ```
 Full config: [configs/cairo/edge-router-cairo.txt](configs/cairo/edge-router-cairo.txt)
