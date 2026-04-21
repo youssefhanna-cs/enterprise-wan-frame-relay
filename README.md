@@ -276,11 +276,15 @@ enterprise-wan-frame-relay/
 
 ## 👨‍💻 Author
 
+**Youssef Hanna**
+
 > Developed as part of **Data Communication coursework** — simulating a real-world multi-branch WAN using Cisco Packet Tracer.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/youssef-hanna-29759433a/)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=flat&logo=github)](https://github.com/youssefhanna-cs)
 
 ---
+
+![Stars](https://img.shields.io/github/stars/youssefhanna-cs/enterprise-wan-frame-relay?style=for-the-badge)
 
 *⭐ If you found this project useful, give it a star!*
