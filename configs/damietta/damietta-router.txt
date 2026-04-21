@@ -6,3 +6,11 @@ ip add 40.0.0.3 255.255.255.0
 no sh 
 ex
 
+int s0/1/0
+encapsulation frame-relay
+ip add 10.10.10.4 255.0.0.0
+frame-relay map ip 10.10.10.1 40 broadcast
+frame-relay map ip 10.10.10.2 50 broadcast
+frame-relay map ip 10.10.10.4 60 broadcast
+no sh
+ex
