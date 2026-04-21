@@ -6,10 +6,13 @@ conf t
 
 int s0/1/0
 encapsulation frame-relay
-ip add 10.10.10.2 255.255.255.0
-frame-relay map ip 10.10.10.1 201 broadcast
+ip add 10.10.10.2 255.0.0.0
+frame-relay map ip 10.10.10.1 400 broadcast
+frame-relay map ip 10.10.10.3 500 broadcast
+frame-relay map ip 10.10.10.4 600 broadcast
 no sh
 ex
+
 
 int g0/0
 ip add 20.0.0.1 255.255.255.0
