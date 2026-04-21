@@ -302,7 +302,4 @@ enterprise-wan-frame-relay/
 
 ---
 
-[![Stars](https://img.shields.io/github/stars/youssefhanna-cs/enterprise-wan-frame-relay?style=for-the-badge)](https://github.com/youssefhanna-cs/enterprise-wan-frame-relay)
-
-
 *⭐ If you found this project useful, give it a star!*
