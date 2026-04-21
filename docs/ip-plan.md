@@ -4,10 +4,10 @@
 
 | Router | Interface | IP Address | DLCI |
 |--------|-----------|------------|------|
-| Cairo (Hub) | Se0/1/0 | 10.10.10.1/24 | 102, 103, 104 |
-| Alexandria (Spoke) | Se0/1/0 | 10.10.10.2/24 | 201 |
-| Giza (Spoke) | Se0/1/0 | 10.10.10.3/24 | 301 |
-| Damietta (Spoke) | Se0/1/0 | 10.10.10.4/24 | 401 |
+| Cairo | Se0/1/0 | 10.10.10.1/8 | 100, 200, 300 |
+| Alexandria | Se0/1/0 | 10.10.10.2/8 | 400, 500, 600 |
+| Giza | Se0/1/0 | 10.10.10.3/8 | 700, 800, 900 |
+| Damietta | Se0/1/0 | 10.10.10.4/8 | 40, 50, 60 |
 
 ---
 
@@ -19,6 +19,7 @@
 | Cairo Router | Gi0/1 | 70.0.0.3/24 | RIP |
 | Redistribution Router | Gi0/0 | 50.0.0.2/24 | OSPF |
 | Redistribution Router | Gi0/1 | 60.0.0.1/24 | RIP |
+| Edge Router | Se0/1/0 | 10.10.10.1/8 | WAN |
 | Edge Router | Gi0/0 | 50.0.0.1/24 | OSPF |
 | PC0 | Fa0 | 70.0.0.2/24 | — |
 | PC1 | Fa0 | 70.0.0.1/24 | — |
@@ -30,6 +31,7 @@
 | Device | Interface | IP Address | Network |
 |--------|-----------|------------|---------|
 | Damietta Router | Gi0/0 | 40.0.0.3/24 | OSPF |
+| Damietta Router | Se0/1/0 | 10.10.10.4/8 | WAN |
 | PC2 | Fa0 | 40.0.0.2/24 | — |
 | PC3 | Fa0 | 40.0.0.1/24 | — |
 
@@ -39,7 +41,7 @@
 
 | Device | Interface | IP Address | Network |
 |--------|-----------|------------|---------|
-| Edge Router | Se0/1/0 | 10.10.10.2/24 | WAN |
+| Edge Router | Se0/1/0 | 10.10.10.2/8 | WAN |
 | Edge Router | Gi0/0 | 20.0.0.1/24 | EIGRP AS5 |
 | Redistribution Router | Gi0/0 | 20.0.0.2/24 | EIGRP AS5 |
 | Redistribution Router | Gi0/1 | 30.0.0.1/24 | EIGRP AS8 |
@@ -55,7 +57,7 @@
 
 | Device | Interface | IP Address | Network |
 |--------|-----------|------------|---------|
-| Edge+Redist Router | Se0/1/0 | 10.10.10.3/24 | WAN |
+| Edge+Redist Router | Se0/1/0 | 10.10.10.3/8 | WAN |
 | Edge+Redist Router | Gi0/0 | 90.0.0.1/24 | EIGRP AS9 |
 | Edge+Redist Router | Gi0/1 | 80.0.0.1/24 | OSPF |
 | Giza Router-1 | Gi0/0 | 90.0.0.2/24 | EIGRP AS9 |
