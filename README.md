@@ -198,13 +198,13 @@ enterprise-wan-frame-relay/
 │   ├── cairo/
 │   │   ├── cairo-router.txt           → RIP + ACL
 │   │   ├── cairo-SW.txt               → Port Security, RSTP
-│   │   ├── edge-router-cairo.txt      → Frame Relay Hub + OSPF
+│   │   ├── edge-router-cairo.txt      → Frame Relay + OSPF
 │   │   └── redistrubition-router-cairo.txt → RIP ↔ OSPF
 │   ├── damietta/
 │   │   ├── damietta-router.txt        → OSPF
 │   │   └── damietta-SW.txt            → Port Security, RSTP
 │   ├── alexandria/
-│   │   ├── edge-router-alex.txt       → Frame Relay Spoke + EIGRP AS5
+│   │   ├── edge-router-alex.txt       → Frame Relay + EIGRP AS5
 │   │   ├── redistrubition-router-alex.txt → EIGRP AS5 ↔ AS8
 │   │   ├── alex-router.txt            → Router-on-a-Stick + EIGRP AS8
 │   │   └── alex-SW.txt                → VLANs + Trunk
