@@ -14,3 +14,8 @@ frame-relay map ip 10.10.10.2 50 broadcast
 frame-relay map ip 10.10.10.3 60 broadcast
 no sh
 ex
+
+router ospf 22
+net 40.0.0.0 0.0.0.255 area 0
+net 10.0.0.0 0.255.255.255 area 0
+ex
