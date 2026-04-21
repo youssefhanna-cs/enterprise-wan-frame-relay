@@ -7,7 +7,8 @@ no sh
 ex
 
 router ospf 22
-net 50.0.0.0 255.255.255.0 area 0
+net 50.0.0.0 0.0.0.255 area 0
+net 10.0.0.0 0.255.255.255 area 0
 ex
 
 int s0/1/0
