@@ -18,12 +18,12 @@ This project simulates a **real-world enterprise WAN** connecting four company b
 
 ## 🏢 Branch Summary
 
-| Branch | WAN Role | Internal Protocol | WAN IP | Key Subnet |
-|--------|----------|-------------------|--------|------------|
-| Cairo (HQ) | Hub | RIP + OSPF | 10.10.10.1/24 | 70.0.0.0/24, 60.0.0.0/24 |
-| Damietta | Spoke | OSPF | 10.10.10.4/24 | 40.0.0.0/24 |
-| Alexandria | Spoke | EIGRP AS5 + AS8 | 10.10.10.2/24 | 192.168.5.0/24, 192.168.6.0/24 |
-| Giza | Spoke | OSPF + EIGRP AS9 | 10.10.10.3/24 | 192.168.1.0/24, 192.168.2.0/24 |
+| Branch | Internal Protocol | WAN IP | Key Subnet |
+|--------|-------------------|--------|------------|
+| Cairo (HQ) | RIP + OSPF | 10.10.10.1/8 | 70.0.0.0/24, 60.0.0.0/24 |
+| Damietta | OSPF | 10.10.10.4/8 | 40.0.0.0/24 |
+| Alexandria | EIGRP AS5 + AS8 | 10.10.10.2/8 | 192.168.5.0/24, 192.168.6.0/24 |
+| Giza | OSPF + EIGRP AS9 | 10.10.10.3/8 | 192.168.1.0/24, 192.168.2.0/24 |
 
 > Full IP addressing plan: [docs/ip-plan.md](docs/ip-plan.md)
 
@@ -39,7 +39,7 @@ This project simulates a **real-world enterprise WAN** connecting four company b
 
 ### WAN
 - [x] Connect all 4 branches via **Frame Relay ISP Cloud**
-- [x] Configure **Hub-and-Spoke** — Cairo as the Hub
+- [x] Configure **Full Mesh** topology — every branch has a direct PVC to all others
 - [x] Assign DLCI values and verify PVCs (Permanent Virtual Circuits)
 
 ### Routing & Redistribution
@@ -65,7 +65,7 @@ This project simulates a **real-world enterprise WAN** connecting four company b
 
 | Category | Details |
 |----------|---------|
-| WAN | Frame Relay, Hub-and-Spoke, DLCI, PVC |
+| WAN | Frame Relay, Full Mesh, DLCI, PVC |
 | Routing Protocols | RIP v2, OSPF (Area 0), EIGRP (AS 5, 8, 9) |
 | Advanced Routing | Route Redistribution across all protocol boundaries |
 | LAN Segmentation | VLANs (802.1Q), Trunk Links |
@@ -79,7 +79,7 @@ This project simulates a **real-world enterprise WAN** connecting four company b
 ## 🔗 Key Configurations
 
 <details>
-<summary>📁 Frame Relay — Cairo Hub (edge-router-cairo.txt)</summary>
+<summary>📁 Frame Relay — Cairo (edge-router-cairo.txt)</summary>
 
 ```bash
 int s0/1/0
@@ -179,7 +179,6 @@ Full config: [configs/cairo/cairo-router.txt](configs/cairo/cairo-router.txt)
 
 | Challenge | Solution |
 |-----------|----------|
-| Spoke-to-spoke traffic not working | All spoke traffic routed through Cairo Hub — standard Hub-and-Spoke behavior |
 | EIGRP neighbors not forming across Frame Relay | Added `broadcast` keyword to `frame-relay map` commands |
 | Routing loops during redistribution | Careful metric tuning and incremental protocol-by-protocol testing |
 | ACL blocking unintended traffic | Used extended ACL with specific `host` keyword for source and destination |
@@ -235,9 +234,9 @@ enterprise-wan-frame-relay/
 
 ## 📚 Key Learnings
 
-- Designing a **real-world WAN** using Frame Relay Hub-and-Spoke
+- Designing a **real-world WAN** using Frame Relay Full Mesh
 - Running **multiple routing protocols** in one network and making them interoperate via redistribution
-- Understanding the **limitations of Hub-and-Spoke** (spoke-to-spoke must traverse the hub)
+- Understanding **Frame Relay Full Mesh** and direct branch-to-branch communication
 - Implementing **Router-on-a-Stick** for VLAN routing without a Layer 3 switch
 - Applying **Extended ACLs** for precise traffic control between specific hosts
 
