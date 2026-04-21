@@ -10,3 +10,11 @@ router ospf 22
 net 50.0.0.0 255.255.255.0 area 0
 ex
 
+int s0/1/0
+encapsulation frame-relay
+ip add 10.10.10.1 255.0.0.0
+frame-relay map ip 10.10.10.2 100 broadcast
+frame-relay map ip 10.10.10.3 200 broadcast
+frame-relay map ip 10.10.10.4 300 broadcast
+no sh
+ex
