@@ -22,7 +22,7 @@ The company needs a **unified WAN infrastructure** that:
 
 As the network engineer, the solution was to:
 
-1. **Deploy a Frame Relay WAN** using a simulated ISP Cloud to interconnect all branches in a **Hub-and-Spoke** topology, with **Cairo as the Hub**
+1. **Deploy a Frame Relay WAN** using a simulated ISP Cloud to interconnect all branches in a **Full Mesh** topology — every branch has a direct PVC to all others
 2. **Maintain existing routing protocols** per branch:
    - Cairo: RIP (internal LAN) + OSPF (toward WAN edge)
    - Damietta: OSPF
@@ -43,9 +43,9 @@ As the network engineer, the solution was to:
 
 ## 📍 Branch Summary
 
-| Branch | Role | Internal Protocol | WAN IP |
-|--------|------|-------------------|--------|
-| Cairo | Hub (HQ) | RIP + OSPF | 10.10.10.1 |
-| Damietta | Spoke | OSPF | 10.10.10.4 |
-| Alexandria | Spoke | EIGRP AS5 + AS8 | 10.10.10.2 |
-| Giza | Spoke | OSPF + EIGRP AS9 | 10.10.10.3 |
+| Branch | Internal Protocol | WAN IP |
+|--------|-------------------|--------|
+| Cairo | RIP + OSPF | 10.10.10.1 |
+| Damietta | OSPF | 10.10.10.4 |
+| Alexandria | EIGRP AS5 + AS8 | 10.10.10.2 |
+| Giza | OSPF + EIGRP AS9 | 10.10.10.3 |
