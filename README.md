@@ -16,6 +16,21 @@ This project simulates a **real-world enterprise WAN** connecting four company b
 
 ---
 
+## 🎥 Video Walkthrough
+
+Full step-by-step implementation recorded and published as a YouTube playlist to help others understand and apply the concepts.
+
+| # | Video | Topics Covered |
+|---|-------|---------------|
+| 1 | [Review + Cairo + Damietta](https://youtu.be/cBu9hX5db6w?si=PjrlF59DG9ojak5N) | Course review, Cairo branch (RIP + OSPF), Damietta branch (OSPF) |
+| 2 | [Alexandria Branch](https://youtu.be/L-ilu67_FEc?si=NsuZvHhgXBjC4bzz) | EIGRP AS5 + AS8, VLANs, Router-on-a-Stick |
+| 3 | [Giza Branch](https://youtu.be/_ZeZaYg-atc?si=Ug8m4lUQT2BRf7Mx) | OSPF + EIGRP AS9, Route Redistribution |
+| 4 | [Frame Relay + WAN Integration](https://youtu.be/jsZQyGy5c3I?si=TOStmoSCEsd9v2CD) | Frame Relay Full Mesh, ISP Cloud, connecting all branches |
+
+▶️ [Watch Full Playlist](https://www.youtube.com/watch?v=cBu9hX5db6w&list=PLaJvdaeO_sf9OfaUifHQRmkXbocla-0ef)
+
+---
+
 ## 🏢 Branch Summary
 
 | Branch | Internal Protocol | WAN IP | Key Subnet |
@@ -258,10 +273,12 @@ enterprise-wan-frame-relay/
 | Document | Description |
 |----------|-------------|
 | [scenario.md](docs/scenario.md) | Business context & problem statement |
+| [walkthrough.md](docs/walkthrough.md) | 4-part video walkthrough on YouTube |
 | [ip-plan.md](docs/ip-plan.md) | Complete IP addressing table |
 | [design-decisions.md](docs/design-decisions.md) | Technology choices explained |
 | [verification.md](docs/verification.md) | Test cases, commands & results |
 | [case-study.md](docs/case-study.md) | Full technical report |
+
 
 ---
 
