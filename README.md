@@ -15,6 +15,11 @@ This project simulates a **real-world enterprise WAN** connecting four company b
 > Full scenario: [docs/scenario.md](docs/scenario.md)
 
 ---
+## 🖼️ Network Topology
+
+![Network Topology](topology.png)
+
+---
 
 ## 🎥 Video Walkthrough
 
@@ -41,12 +46,6 @@ Full step-by-step implementation recorded and published as a YouTube playlist to
 | Giza | OSPF + EIGRP AS9 | 10.10.10.3/8 | 192.168.1.0/24, 192.168.2.0/24 |
 
 > Full IP addressing plan: [docs/ip-plan.md](docs/ip-plan.md)
-
----
-
-## 🖼️ Network Topology
-
-![Network Topology](topology.png)
 
 ---
 
